@@ -7,7 +7,7 @@ from psycopg2.extras import Json
 def insercao():
     conn = psycopg2.connect(host='$host', dbname='$database', user='$user', password='$password')
     cur = conn.cursor()
-    data = open('db/INSERT-automovel-50k.sql','r')
+    data = open('INSERT-automovel-50k.sql','r')
     sqlFile = data.read()
     data.close()
     sqlCommands = sqlFile.split(';')
