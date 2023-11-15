@@ -14,7 +14,7 @@ def db_connect():
 
 def insercao():
     deployments_collection = db_connect()["automovel"]
-    with open('db/INSERT-automovel-50k.json') as file:
+    with open('INSERT-automovel-50k.json') as file:
         data = json.load(file)
     inicio = time.time()
     result = deployments_collection.insert_many(data)
